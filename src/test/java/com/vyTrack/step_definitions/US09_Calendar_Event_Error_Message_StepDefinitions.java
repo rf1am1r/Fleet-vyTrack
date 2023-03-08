@@ -57,7 +57,8 @@ public class US09_Calendar_Event_Error_Message_StepDefinitions extends BasePage 
 
 
        // this is the dynamic element, that's why we need to handle, otherwise we'll get NSEException, refer to the POM(CalendarEventsPage)
-       calendarEventsPage.repeatRadioButton.click();
+        BrowserUtils.waitForClickablility(calendarEventsPage.repeatRadioButton,5);
+        calendarEventsPage.repeatRadioButton.click();
 
     }
 
