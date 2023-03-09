@@ -100,4 +100,12 @@ public abstract class BasePage {
         }
     }
 
+
+    // "Calendar Events" option under the "Activities" module
+
+    @FindBy(xpath = "//*[contains(@data-route, 'oro_calendar_event_index')]")
+    public WebElement calendarEvents;
+
+
+
 }
