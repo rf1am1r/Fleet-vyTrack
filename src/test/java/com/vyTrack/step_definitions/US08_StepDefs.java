@@ -27,9 +27,10 @@ public class US08_StepDefs extends BasePage {
             String moduleName = eachModule.getText();
 
             if(moduleName.contains("Activities")){
-                // System.out.println("Module name = " + eachModule.getText());
+                 System.out.println("Module name = " + eachModule.getText());
                 BrowserUtils.waitFor(2);
                 eachModule.click();
+                BrowserUtils.waitFor(4);
                /* try {
                     eachModule.click();
                 }catch(ElementClickInterceptedException e){
@@ -40,9 +41,9 @@ public class US08_StepDefs extends BasePage {
             }
 
         }
+        calendarEvent_pg.waitUntilLoaderScreenDisappear();
 
-
-        BrowserUtils.waitForClickablility(calendarEvents,7);
+       // BrowserUtils.waitForClickablility(calendarEvents,10);
         calendarEvents.click();
 
     }
@@ -63,22 +64,26 @@ public class US08_StepDefs extends BasePage {
     }
 
     @Then("Verify the repeat number is {int}")
-    public void verifyTheRepeatNumberIs(int actualDefaultNumber) {
+    public void verifyTheRepeatNumberIs(Integer actualDefaultNumber) {
 
+        BrowserUtils.waitFor(3);
         Integer expectedDefaultNumber = Integer.valueOf(calendarEvent_pg.repeatInput.getAttribute("value"));
-        Assert.assertEquals(Optional.of(actualDefaultNumber),expectedDefaultNumber);
+        Assert.assertEquals(actualDefaultNumber,expectedDefaultNumber);
 
 
     }
 
-    @Then("Clear\\(delete) the number {int}")
+    @When("Clear\\(delete) the number {int}")
     public void clearDeleteTheNumber(int DefaultNumber) {
         BrowserUtils.waitForVisibility(calendarEvent_pg.repeatInput,5);
-        actions.doubleClick(calendarEvent_pg.repeatInput).sendKeys(Keys.CLEAR).perform();
+        actions.doubleClick(calendarEvent_pg.repeatInput).sendKeys(Keys.DELETE).perform();
+
+        calendarEvent_pg.saveAndCloseButton.click();
+        BrowserUtils.waitFor(2);
     }
 
 
-    @And("Verify the app displays {string}")
+    @Then("Verify the app displays {string}")
     public void verifyTheAppDisplays(String actualErrorMessage) {
 
         String expectedErrorMessage = calendarEvent_pg.repeatInputErrorMessage.getText();

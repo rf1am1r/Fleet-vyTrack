@@ -28,8 +28,8 @@ Feature: Calendar Event functionality tests
     When Click the Calendar Events under the Activities
     And Click the Create Calendar Event button
     And Check the Repeat checkbox
-    Then Clear(delete) the number 1
-    And Verify the app displays "This value should not be blank."
+    When Clear(delete) the number 1
+    Then Verify the app displays "This value should not be blank."
 
     Examples:
       |  userType   |

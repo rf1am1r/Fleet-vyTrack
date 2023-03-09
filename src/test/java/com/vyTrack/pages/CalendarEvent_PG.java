@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CalendarEvent_PG {
+public class CalendarEvent_PG extends BasePage{
 
 
     public CalendarEvent_PG(){

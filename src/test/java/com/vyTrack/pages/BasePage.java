@@ -109,5 +109,4 @@ public abstract class BasePage {
     public WebElement calendarEvents;
 
 
-
 }
