@@ -33,3 +33,4 @@ Feature: Users should see an error message when entering invalid integer in the 
   |store manager|
 
     #be careful of the 'more than 100 and more than 99' parts!!!
+    #create separate values
