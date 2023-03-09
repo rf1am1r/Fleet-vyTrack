@@ -1,6 +1,7 @@
 
-
 Feature:As a user, I want to see edit car info icons from the Vehicle page.
+  Agile User Story: As a user, I want to see edit car info icons from the Vehicle page.
+  AC #1:  users should see “view, edit, delete” when they hover the mouse over the 3 dots “…”
 
   Background: User is already in the log in page
     Given the user is on the login page
@@ -17,4 +18,4 @@ Feature:As a user, I want to see edit car info icons from the Vehicle page.
     |  userType   |
     |   driver    |
     |sales manager|
-  #  |store manager|
+    |store manager|

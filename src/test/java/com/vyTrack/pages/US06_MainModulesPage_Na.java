@@ -11,15 +11,14 @@ public class US06_MainModulesPage_Na {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[@class='title title-level-1'][normalize-space()='Fleet']")
+    //@FindBy(xpath = "//span[@class='title title-level-1'][normalize-space()='Fleet']")
+   // public WebElement driverFleet;
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
     public WebElement driverFleet;
-   // @FindBy(css = "li[class='dropdown dropdown-level-1 align-menu-right'] span[class='title title-level-1']")
-    //public WebElement driverFleet;
 
 
     @FindBy(xpath = "//span[normalize-space()='Vehicles']")
     public WebElement driverVehicle;
-
 
 
     @FindBy(xpath = "(//div[@class = 'dropdown'])[1]")

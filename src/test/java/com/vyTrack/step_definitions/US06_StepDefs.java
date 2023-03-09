@@ -23,7 +23,7 @@ public class US06_StepDefs extends BasePage {
 
             if (moduleName.contains("Fleet")) {
                 // System.out.println("Module name = " + eachModule.getText());
-                BrowserUtils.waitFor(2);
+                BrowserUtils.waitForClickablility(eachModule,3);
                 eachModule.click();
                 /* try {
                      eachModule.click();
@@ -36,7 +36,7 @@ public class US06_StepDefs extends BasePage {
 
                 break;
             }
-            BrowserUtils.waitForClickablility(us06_mainModulesPage_na.driverFleet,5);
+            BrowserUtils.waitForClickablility(us06_mainModulesPage_na.driverFleet,7);
             us06_mainModulesPage_na.driverFleet.click();
         }
     }
