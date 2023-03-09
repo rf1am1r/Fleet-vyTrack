@@ -7,14 +7,7 @@ Feature: Customers account page functionality test
     Given the user is on the login page
 
   @account
-    Scenario: User accesses the homepage
-      Given the user is on the login page
-      When User enters login credentials
-      Then User is taken to the homepage
-
-
-
-      Scenario: Users should see 8 filter items on the Accounts page
+  Scenario: Users should see 8 filter items on the Accounts page
         Given the user is on the home page
         When user clicks customer tab on the top left module
         Then User clicks on accounts tab
