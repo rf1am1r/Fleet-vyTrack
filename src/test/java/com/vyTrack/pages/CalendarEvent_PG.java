@@ -1,23 +1,27 @@
 package com.vyTrack.pages;
 
 import com.vyTrack.utilities.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CalendarEventsPage_Amir {
+import java.util.List;
 
-    public CalendarEventsPage_Amir(){
+public class CalendarEvent_PG extends BasePage{
+
+
+    public CalendarEvent_PG(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
 
     @FindBy(xpath = "//a[@title='Create Calendar event']")
     public WebElement createCalendarEventButton;
 
 
     @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
-    public WebElement repeatRadioButton;
+    public WebElement repeatCheckBox;
 
 
 
@@ -36,4 +40,6 @@ public class CalendarEventsPage_Amir {
 
 
 
+
 }
+
