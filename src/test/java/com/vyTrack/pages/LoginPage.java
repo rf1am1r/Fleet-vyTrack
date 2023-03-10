@@ -42,7 +42,11 @@ public class LoginPage {
     @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement warningText;
 
-@FindBy(xpath = "//thead[@class='grid-header']//th//span[@class='grid-header-cell__label']")
+   //
+   //@FindBy(xpath = "//thead[@class='grid-header']//th//span[@class='grid-header-cell__label']")
+   @FindBy(xpath = "//span[@class='grid-header-cell__label']")
+
+   // @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']")
     public List <WebElement> tableMenu;
 
 }
