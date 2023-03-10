@@ -19,12 +19,14 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    @FindBy(css = "span.title-level-1")
-    public List<WebElement> menuOptions;
+
 
     @FindBy(css = "div[class='loader-mask shown']")
     @CacheLookup
     protected WebElement loaderMask;
+
+     @FindBy(css = "span.title-level-1")
+    public List<WebElement> menuOptions;
 
     @FindBy(css = "h1[class='oro-subtitle']")
     public WebElement pageSubTitle;
@@ -99,5 +101,12 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+
+    // "Calendar Events" option under the "Activities" module
+
+    @FindBy(xpath = "//*[contains(@data-route, 'oro_calendar_event_index')]")
+    public WebElement calendarEvents;
+
 
 }
