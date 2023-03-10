@@ -10,14 +10,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
 
-public abstract class BasePage {
+public class BasePage {
 
 
 
@@ -101,6 +103,14 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+
+
+    @FindBy(xpath = "//span[.='Vehicle Contracts']")
+    public WebElement vehicleContractsOption;
+
+
+
 
 
     // "Calendar Events" option under the "Activities" module

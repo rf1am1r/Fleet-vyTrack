@@ -23,7 +23,7 @@ public class Hooks {
     //import the @Before coming from io.cucumber.java
     @Before (order = 1)
     public void setupMethod(){
-
+        Driver.getDriver().get("https://qa2.vytrack.com/");
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
