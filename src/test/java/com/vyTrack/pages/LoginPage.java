@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 public class LoginPage {
 
     public LoginPage(){
@@ -32,21 +30,5 @@ public class LoginPage {
         submit.click();
         // verification that we logged
     }
-
-@FindBy(xpath = "//span[@class='title title-level-1'][normalize-space()='Fleet']")
-    public WebElement fleetButton;
-
-    @FindBy(xpath = "//span[normalize-space()='Vehicles Model']")
-    public WebElement vehiclesModelButton;
-
-    @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
-    public WebElement warningText;
-
-   //
-   //@FindBy(xpath = "//thead[@class='grid-header']//th//span[@class='grid-header-cell__label']")
-   @FindBy(xpath = "//span[@class='grid-header-cell__label']")
-
-   // @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']")
-    public List <WebElement> tableMenu;
 
 }
