@@ -2,14 +2,8 @@ package com.vyTrack.step_definitions;
 
 import com.vyTrack.pages.LoginPage;
 import com.vyTrack.utilities.ConfigurationReader;
-
 import io.cucumber.java.en.Given;
-
-
-
-
 public class LoginStepDefs {
-
 
 
 
@@ -45,6 +39,4 @@ public class LoginStepDefs {
 
 
 
-
 }
-
