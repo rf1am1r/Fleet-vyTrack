@@ -18,9 +18,9 @@ public class US01_Mehmet_Pages {
     }
 
 
-    @FindBy(xpath = "//span[@class='title title-level-1']")
-    public List<WebElement> mainPage;
+   @FindBy(xpath ="//span[@class='title title-level-1']")
 
+    public List<WebElement> driversPage;
 
 
 }

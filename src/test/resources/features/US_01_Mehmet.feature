@@ -6,22 +6,22 @@ Feature: User should be able to access all the main modules of the app
     Given the user is on the login page
 
 
-@wip
+@Mehmet
   Scenario: Store managers should view 8 module names.
-    Given User should login as Store manager
-    Then Store manager should view 8 module
+    Given the user logged in as "Store manager"
+    Then Store manager should view eight module
 
 
-  @wip
+  @Mehmet
   Scenario: Sales Manager should view 8 module names.
-    Given User should login as Sales manager
-    Then Sales manager should view 8 module
+    Given the user logged in as "Sales manager"
+    Then Sales manager should view eight module
 
 
-  @wip
+  @Mehmet
   Scenario: Driver should view 4 module names.
-    Given User should login as Driver
-    Then Drivers should view 4 module
+    Given the user logged in as "Driver"
+    Then Drivers should view four module
 
 
 
